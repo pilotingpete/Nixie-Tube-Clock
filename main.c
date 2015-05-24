@@ -4,7 +4,7 @@
 	Program Title:	Nixie Clock
 	Author:			Pete Mills
 	Email:			mills.pete@gmail.com
-    Website:        petemills.blogspot.com
+	Website:        petemills.blogspot.com
 	Version:		1.0
 	Filename:		main.c
 	License:		CC BY-NC-SA 3.0 ( Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported )
@@ -39,6 +39,7 @@
 	
 	Processor:	ATMega328
 	F_CPU:		16384000 Hz
+	
 	Schematic at petemills.blogspot.com
 	
  ~~~~~~~~~~~~~~~~~~~******************** Program Description ********************~~~~~~~~~~~~~~~~~~~
