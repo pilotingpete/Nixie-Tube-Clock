@@ -768,6 +768,36 @@ void process_command()
     	
     }
     
+    else if( strcasestr( myUartString, "help" ) != NULL ){
+    	// print instructions
+    	uart_puts("Command");			uart_puts("\t\t");	uart_puts("Set/Read");	uart_puts("\t");	uart_puts("Low Lim");				uart_puts("\t\t\t");	uart_puts("High Lim");		uart_puts( RETURN_NEWLINE );	
+    	uart_puts("hours");				uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("23");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("minutes");			uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("59");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("seconds");			uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("59");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("mscal");				uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("4294967295");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("miltime");			uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("year");				uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("2525");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("month");				uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("12");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("day");				uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("31");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("celsius");			uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("doecho");			uart_puts("\t\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("accclock");			uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("xtalisfast");		uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("showtherm");			uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("showfreq");			uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("showdate");			uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("toggleled");			uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("1");				uart_puts( RETURN_NEWLINE );
+    	uart_puts("nixiesleepstart");	uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("0");						uart_puts("\t\t\t");	uart_puts("2358");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("nixiesleepend");		uart_puts("\t");	uart_puts("=/?");		uart_puts("\t\t");	uart_puts("nixiesleepstart + 1");	uart_puts("\t");		uart_puts("2359");			uart_puts( RETURN_NEWLINE );
+    	uart_puts("getall");			uart_puts("\t\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("ramtoeeprom");		uart_puts("\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("poke");				uart_puts("\t\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("pwrok");				uart_puts("\t\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("hvfeedback");		uart_puts("\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("battvoltage");		uart_puts("\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    	uart_puts("rectifiedac");		uart_puts("\t");	uart_puts("[ENTER]");	uart_puts( RETURN_NEWLINE );
+    }
+    
     else if(strcasestr(myUartString,"ramtoeeprom") != NULL){
     	updateVarsToEeprom();   
 		uart_puts( "EEPROM Storage Complete");
